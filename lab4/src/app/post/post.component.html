@@ -1,0 +1,8 @@
+ <h1 class="m-auto">Post Id :  {{post.id            }}              Post Tittle: {{post.title}} </h1> <br> 
+  <h4>Comments :</h4><br>
+  <div *ngFor="let comment of comments;index as i">
+   <h4>   Id :   {{comment.id}}  </h4> <br>
+   <h4>   Name :   {{comment.name}}  </h4> <br>
+   <h5> <p> Body : {{comment.body}}</p></h5><br>
+   <h4>   Email :   {{comment.email }}  </h4> <br>
+  </div><br><br>

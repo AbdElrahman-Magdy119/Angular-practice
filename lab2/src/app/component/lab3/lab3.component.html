@@ -1,0 +1,41 @@
+   
+   
+   
+             <!-- style="height: 2rem; overflow:hidden;"
+
+             style="height: 5rem; overflow:hidden;"
+   
+    -->
+   
+   <div class="row">
+            <div class="col">
+                <img [src]="post.image" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title" >{{ post.title | titlecase }}</h5>
+                </div>
+            </div>
+          </div>
+          <div class="row ms-1 " >
+            <div class="col">
+                <p class="card-text">{{ post.content }} </p>
+            </div>
+          </div>
+          <div class="row ms-1">
+            <div class="col">
+                <p class="card-text">{{ post.createdAt }} </p>
+            </div>
+          </div>
+          <div class="row ms-1 pb-3">
+                    <div class="col">
+                        <p class="position-relative">{{ post.creator.name }} 
+                        <span [style.background-color]="post.creator.isOnline ? 'green' : 'red'" class="position-absolute top-50 ms-3 translate-middle
+                         p-2 border border-light rounded-circle">
+                        </span></p>
+                        <a #changefollow (click)="onclick(changefollow)" [style.background-color]="post.creator.isFollowing ? 'green' : 'red'"  href="#" class="btn text-light">{{ post.creator.isFollowing ? "following" : "follow"  }}</a>
+                        
+                    </div> 
+                    <div class="col">
+                        <p>followers : {{ post.creator.followers }}</p>
+                        <p>likes     : {{ post.likes }}</p>
+                    </div>
+          </div>

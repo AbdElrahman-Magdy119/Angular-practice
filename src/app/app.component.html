@@ -1,0 +1,12 @@
+<!-- event binding -->
+<button (click)="onClick($event)">Click</button>
+<input #myInput type="text" (keyup)="onInput(myInput)" />
+
+<!-- passing data between parent and child (input, output) -->
+<app-child
+  [message]="childMessage"
+  (sendData)="recieveData($event)"
+></app-child>
+
+<!-- using pipes -->
+{{ pipeData | date : "long" : "+03:00" | slice : 0 : 10 }}

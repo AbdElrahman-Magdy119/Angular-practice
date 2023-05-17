@@ -1,0 +1,32 @@
+<a routerLink="/home"
+   routerLinkActive="abdo"
+  [routerLinkActiveOptions]="{ exact: true}"
+>home</a>
+<a routerLink="/profile"
+   routerLinkActive="abdo"
+  [routerLinkActiveOptions]="{ exact: true}"
+>profile</a>
+<a routerLink="/"
+   routerLinkActive="abdo"
+  [routerLinkActiveOptions]="{ exact: true}"
+>app</a>
+<a routerLink="/profile/1"
+   routerLinkActive="abdo"
+  [routerLinkActiveOptions]="{ exact: true}"
+>user1</a>
+<a routerLink="/profile/2"
+   routerLinkActive="abdo"
+  [routerLinkActiveOptions]="{ exact: true}"
+>user2</a>
+<a routerLink="/profile?value=val"
+   routerLinkActive="abdo"
+  [routerLinkActiveOptions]="{ exact: true}"
+>query</a>
+<a routerLink="/form"
+   routerLinkActive="abdo"
+  [routerLinkActiveOptions]="{ exact: true}"
+>form</a>
+
+<p>in app html</p>
+ <router-outlet></router-outlet>
+ <p>in app html</p>

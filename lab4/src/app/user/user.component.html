@@ -1,0 +1,38 @@
+
+
+  <h1 class="m-auto">User Name :  {{userdata.name }}</h1> <br>
+  <h4>Posts :</h4><br>
+  <div *ngFor="let post of userpost;index as i">
+   <h4>    {{i+1}}  - Tittle :  <a routerLink='/post/{{ post.id }}' > {{post.title | titlecase}} </a> </h4> <br>
+   <h5> <p> Body : {{post.body}}</p></h5><br>
+  </div><br><br>
+
+  <form action="/action_page.php" class="container  " style="margin-left: 30rem;" >
+    <div class="mb-3 mt-3">
+      <label for="email" class="form-label ms-2">Tittle:</label>
+      <input  #tittle   type="input" class="form-control w-25" id="t1" placeholder="Enter tittle" name="email" 
+       style="border-radius: 25rem;">
+    </div>
+    <div class="mb-3">
+      <label for="pwd" class="form-label ms-2">Body:</label>
+      <input  #body  type="input" class="form-control w-25" id="t2" placeholder="Enter body" name="pswd"  style="border-radius: 25rem;" >
+    </div>
+    <a      (click)="createpost(tittle,body)"   class="btn btn-primary  " style="border-radius: 25rem;margin-left: 5rem;">createpost</a>
+  </form>
+
+
+<!-- 
+  <div class="container">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center ">
+        <div class="card w-75 text-center">
+          <div class="card-header ">Header</div>
+          <div class="card-body">Content</div>
+          <div class="card-footer bg-white">Footer</div>
+        </div>
+      </div>
+    </div>
+    
+  </div> -->
+  
+  

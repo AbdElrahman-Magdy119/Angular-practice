@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <table class="table">
+          <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>City</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{ user.id }}</td>
+              <td><a routerLink='/user/{{ user.id }}' routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true}"   >{{ user.name }}  </a> </td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.address.city }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
